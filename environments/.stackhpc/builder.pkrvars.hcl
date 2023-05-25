@@ -1,9 +1,12 @@
-flavor = "vm.ska.cpu.general.small"
-networks = ["a262aabd-e6bf-4440-a155-13dbc1b5db0e"] # WCDC-iLab-60
+flavor = "m1.small"
+#networks = ["demo-net"]
+networks = ["13382f8a-4e3a-42e1-bc01-c306a448b464"] # demo-net
+floating_ip_network = "public1"
 source_image_name = "openhpc-230503-0944-bf8c3f63.qcow2" # https://github.com/stackhpc/ansible-slurm-appliance/pull/252
-fatimage_source_image_name = "Rocky-8-GenericCloud-8.6.20220702.0.x86_64.qcow2"
+fatimage_source_image_name = "Rocky-8-GenericCloud-LVM-8.8-20230518.0.x86_64.qcow2"
+ssh_username = "rocky"
 ssh_keypair_name = "slurm-app-ci"
 ssh_private_key_file = "~/.ssh/id_rsa"
 security_groups = ["default", "SSH"]
-ssh_bastion_host = "128.232.222.183"
-ssh_bastion_username = "slurm-app-ci"
+ssh_bastion_host = "185.47.227.241"
+ssh_bastion_username = "ubuntu"
